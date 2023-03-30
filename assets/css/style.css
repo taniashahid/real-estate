@@ -1,0 +1,60 @@
+/* 
+Green:#59b001 
+Light Blue: #f0f4f5 
+light Green: #5cab0f
+ */
+
+ *{
+    margin: 0;
+    padding: 0;
+    --primaryGreen: #59b001;
+    --secondaryGreen:#5cab0f;
+    --lightBlue: #f0f4f5 ;
+    --black: #00000000;
+    --white:#fff;
+    
+
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    
+}
+
+.top-socialbar-wrapper{
+    background-color: var(--primaryGreen);
+    padding: 6px 0;
+}
+
+.topbar-inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-detail{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.contact-detail li a{
+    text-decoration: none;
+    color: var(--white);
+    padding: 0 12px;
+    display: inline-block;
+}
+
+.social-icons li:first-child{
+    border-right: 2px solid var(--white);
+}
+
+.contact-detail li > span{
+    font-weight: bold;
+    color: var(--white);
+}
+
