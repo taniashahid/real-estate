@@ -58,3 +58,82 @@ html{
     color: var(--white);
 }
 
+
+
+/* Utility Classes */
+ 
+.pl-0{
+    padding-left: 0!important;
+ }
+ .pr-0{
+    padding-right: 0;
+ }
+ .pb-0{
+    padding-bottom: 0;
+ }
+ .pt-0{
+    padding-top: 0;
+ }
+ .p{
+    padding: 0;
+ }
+
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+}
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+
+    
+    .social-icons{
+        margin-top: 12px;
+    }
+    .sm-hide{
+        display: none;
+    }
+}
+
+/* // `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+
+ }
+
+/* // `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+
+}
+
+/* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+
+}
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+     .lg-hide{
+        display: none;
+     }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+ }
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+ }
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+
+ }
