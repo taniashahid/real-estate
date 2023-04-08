@@ -23,6 +23,8 @@ html{
 .container{
     max-width: 1170px;
     margin: 0 auto;
+
+    
     
 }
 
@@ -45,7 +47,7 @@ html{
 .contact-detail li a{
     text-decoration: none;
     color: var(--white);
-    padding: 0 12px;
+    padding: 0 6px;
     display: inline-block;
 }
 
@@ -56,6 +58,115 @@ html{
 .contact-detail li > span{
     font-weight: bold;
     color: var(--white);
+}
+    
+
+.primary-navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 0;
+}
+
+.primary-navbar img{
+    width: 100%;
+    height: 48px;
+}
+
+.primary-navbar ul{
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.primary-navbar ul li{
+    list-style: none;
+    padding: 0 8px;
+
+}
+
+.primary-navbar ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    
+}
+
+.primary-navbar ul li a:hover{
+    color: var(--primaryGreen);
+    text-decoration: underline;
+}
+
+.hero-section{
+    position: relative;
+}
+
+
+.hero-section figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    
+}
+
+.hero-section  .overlay{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    inset: 0;
+    
+    
+}  
+
+
+
+.hero-section  .overlay .overlay-inner{
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+.hero-section  .overlay .overlay-inner h3{
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.hero-section  .overlay .overlay-inner h1{
+    color: white;
+    text-transform: uppercase;
+    font-size: 34px;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+.highlight{
+   color: var(--primaryGreen);
+}
+
+.hero-section  .overlay .overlay-inner p{
+    color: var(--white);
+    margin-top: 8px;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+.hero-section .overlay .overlay-inner a:hover{
+    border: none(transparent #fff);
+    background-color: var(--primaryGreen);
+}
+
+.hero-section  .overlay .overlay-inner a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 32px;
+    border: var(--white) solid 1px;
+    text-transform: uppercase;
+    margin-right: 16px;
 }
 
 
@@ -80,19 +191,52 @@ html{
 
 /* // `sm` applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+      .hero-section   .overlay .overlay-inner h3{
+        font-size: 8px;
+     }
 
+      .hero{
+        width: 100%;
+        height: 200px;
+        position: relative;
+     }
+
+     .hero-section .overlay .overlay-inner p{
+        display: none;
+     }
+
+     .hero-section .overlay .overlay-inner a{
+        padding: 6px 8px;
+        width: fit-content !important;
+        font-size: 0.3rem;
+     }
 }
 
 /* // `md` applies to small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
 
     
-    .social-icons{
-        margin-top: 12px;
-    }
+    
     .sm-hide{
         display: none;
+        
+        
     }
+    
+    .mb-hide{
+        display: none;
+    }
+
+    .hero-section .overlay .overlay-inner h1{
+        font-size: 18px;
+        word-spacing: 6px;
+    }
+
+    .overlay-inner{
+       left: 15px !important;
+       width: fit-content !important;
+    }
+     
 }
 
 /* // `lg` applies to medium devices (tablets, less than 992px) */
@@ -107,7 +251,14 @@ html{
 
 /* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
 @media (max-width: 1399.98px) {
+    .overlay-inner{
+        height: max-content;
+        position: absolute;
+        inset: 0;
+        z-index: 11;
+        top: 30%;
 
+    }
 }
 
 
@@ -121,6 +272,10 @@ html{
      .lg-hide{
         display: none;
      }
+    .ls-hide{
+        display: none;
+    }
+    
 }
 
 /* // Large devices (desktops, 992px and up) */
