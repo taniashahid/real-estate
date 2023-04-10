@@ -23,6 +23,7 @@ html{
 .container{
     max-width: 1170px;
     margin: 0 auto;
+    padding: 0 8px;
 
     
     
@@ -101,75 +102,73 @@ html{
     position: relative;
 }
 
+.hero-section .over-lay{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    inset: 0;
+}
 
 .hero-section figure img{
     width: 100%;
     height: 100%;
+    display: block;
     object-fit: cover;
     object-position: center center;
-    display: block;
-    
 }
 
-.hero-section  .overlay{
-    background-color: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    inset: 0;
-    
-    
-}  
-
-
-
-.hero-section  .overlay .overlay-inner{
+.hero-section .over-lay .overlay-inner{
     max-width: 100%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    
 }
 
-.hero-section  .overlay .overlay-inner h3{
-    color: var(--white);
-    text-transform: uppercase;
+.hero-section .over-lay .overlay-inner h3{
     font-size: 20px;
+    text-transform: uppercase;
+    color: var(--white);
+    word-spacing: 4px;
 }
 
-.hero-section  .overlay .overlay-inner h1{
-    color: white;
+.hero-section .over-lay .overlay-inner h1{
+    font-size: 32px;
     text-transform: uppercase;
-    font-size: 34px;
-    margin-top: 12px;
-    margin-bottom: 8px;
+    color: var(--white);
+    margin-top: 8px;
+    word-spacing: 5px;
+    margin-bottom: 12px;
+
 }
 
 .highlight{
-   color: var(--primaryGreen);
+    color: var(--primaryGreen);
+    
 }
 
-.hero-section  .overlay .overlay-inner p{
+.hero-section .over-lay .overlay-inner p{
     color: var(--white);
-    margin-top: 8px;
+    margin-bottom: 18px;
     font-size: 14px;
-    margin-bottom: 16px;
 }
-.hero-section .overlay .overlay-inner a:hover{
+
+.hero-section .over-lay .overlay-inner a:hover{
     border: none(transparent #fff);
     background-color: var(--primaryGreen);
 }
 
-.hero-section  .overlay .overlay-inner a{
+.hero-section .over-lay .overlay-inner a{
     display: inline-block;
-    text-decoration: none;
     color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
     padding: 12px 24px;
     border-radius: 32px;
-    border: var(--white) solid 1px;
-    text-transform: uppercase;
-    margin-right: 16px;
+    border: 1px solid var(--white);
+    margin-right: 28px;
+    
+   
+    
 }
-
-
 
 /* Utility Classes */
  
@@ -191,25 +190,19 @@ html{
 
 /* // `sm` applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-      .hero-section   .overlay .overlay-inner h3{
-        font-size: 8px;
-     }
+    .hero-section .over-lay .overlay-inner h3{
+        font-size: 7px;
+    }
 
-      .hero{
-        width: 100%;
-        height: 200px;
-        position: relative;
-     }
-
-     .hero-section .overlay .overlay-inner p{
+    .hero-section .over-lay .overlay-inner p{
         display: none;
-     }
-
-     .hero-section .overlay .overlay-inner a{
-        padding: 6px 8px;
+    }
+     .hero-section .over-lay .overlay-inner a{
+        padding: 4px 6px;
         width: fit-content !important;
-        font-size: 0.3rem;
-     }
+        font-size: 4px;
+     } 
+     
 }
 
 /* // `md` applies to small devices (landscape phones, less than 768px) */
@@ -226,16 +219,16 @@ html{
     .mb-hide{
         display: none;
     }
-
-    .hero-section .overlay .overlay-inner h1{
-        font-size: 18px;
-        word-spacing: 6px;
+    
+    .hero-section .over-lay .overlay-inner h1{
+        font-size: 12px;
+        word-spacing: 3px;
     }
-
     .overlay-inner{
-       left: 15px !important;
-       width: fit-content !important;
+        left: 12px !important;
+        width: fit-content !important;
     }
+        
      
 }
 
@@ -251,15 +244,16 @@ html{
 
 /* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
 @media (max-width: 1399.98px) {
-    .overlay-inner{
-        height: max-content;
-        position: absolute;
-        inset: 0;
-        z-index: 11;
-        top: 30%;
-
+            
+            .overlay-inner{
+                height: max-content;
+                width: fit-content !important;
+                z-index: 9;
+            }
+            
+    
     }
-}
+
 
 
 /* // Small devices (landscape phones, 576px and up) */
